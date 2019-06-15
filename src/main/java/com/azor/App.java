@@ -2,9 +2,8 @@ package com.azor;
 
 import javax.swing.*;
 import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 
-public class App extends JFrame implements WindowListener {
+public class App extends JFrame {
 
     private JPanel panel1;
     private JLabel label;
@@ -13,7 +12,7 @@ public class App extends JFrame implements WindowListener {
         setSize(800,600);
         setVisible(true);
 
-        addWindowListener(this);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         panel1.setVisible(true);
 
@@ -25,40 +24,5 @@ public class App extends JFrame implements WindowListener {
 
     public static void main(String[] args) {
         App app = new App();
-    }
-
-    @Override
-    public void windowOpened(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowClosing(WindowEvent e) {
-        System.exit(0);
-    }
-
-    @Override
-    public void windowClosed(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowIconified(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowDeiconified(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowActivated(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowDeactivated(WindowEvent e) {
-
     }
 }
